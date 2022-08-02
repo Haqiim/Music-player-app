@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <audio id="player" src=" "> </audio>
+    <div id="banner">
+        <div id="songabout">
+           <div id="song"><strong>Playing now:</strong></div>
+           <div id="author"><strong>Author:</strong></div>
+        </div>
+    </div>
+    <div id="playing">
+        <div id="rangetime">
+            <div class="time" id="current">
+                <div id="sec">00</div>
+                <div class="separator">:</div>
+                <div id="min">00</div>
+                <div class="separator">:</div>
+                <div id="hrs">00</div>
+            </div>
+            <input type="range" name="" id="range1" min="0" max=" " value="0">
+            <div class="time" id="total">0:00</div>
+        </div>
+        <div id="controls">
+            <div id="playmode"></div>
+            <button id="prev" onclick="prevSong()"> > </button>
+            <button id="play" onclick="playSong()"> || </button>
+            <button id="next"onclick="nextSong()"> > </button>
+            <div id="volume">
+                <div id="speaker"></div>
+                <div id="loud">100</div>
+                <div id="volbar">
+                    <input type="range" name="" id="volrange" max="100" min="0" value="100">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
