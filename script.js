@@ -9,6 +9,7 @@ const volrange = document.querySelector("#volrange");
 const speaker = document.querySelector("#loud");
 const sec = document.querySelector("#sec");
 const min = document.querySelector("#min");
+const play = document.querySelector("#play");
 const hrs = document.querySelector("#hrs")
 const playMode = document.querySelector("#playmode")
 const modes = [{mode:"repeatall",src:""},{mode: "repeat",src:""},{mode:"shuffle",src:""}];
@@ -23,7 +24,7 @@ let timer = 00;
 let timer2 = 00;
 let timer3 = 00;
 let interval1;
-
+console.log(play)
 
 const songs = [
     {
@@ -161,6 +162,7 @@ function playSong(){
     getDuration();
     if(!clicked){
         clicked = true;
+        play.childNodes[0].src = "svgs/pause.svg";
         if(paused){
         player.currentTime = currenttime;
         player.play()
@@ -171,8 +173,9 @@ function playSong(){
         player.play();
         setAuthorAndSong();
     }
-}else{
+}else{  
         clicked = false;
+        play.childNodes[0].src = "svgs/play.svg";
         player.pause();
         stopTimer();
         paused = true;
